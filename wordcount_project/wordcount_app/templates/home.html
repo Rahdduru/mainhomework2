@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Wordcount</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body style="text-align: center;">
+        <div class="alert alert-warning" role="alert" style="font-size: 20px;">
+            <b>안녕하세요 이곳에서 글자를 세볼까요?</b>
+            <br>
+            <a href="{% url 'about' %}" style="font-size: 15px;">[더 알아보기]</a>
+        </div>
+        <div class="alert alert-dark" role="alert">
+            <form action="{% url 'result' %}">
+                <p style="font-size: 15px; color: goldenrod;"><b>아래에 텍스트를 입력해주세요!</b></p>
+                <textarea cols="40" rows="10" name="fulltext"></textarea>
+                <br>
+                <input role="button" class="btn btn-warning" type="submit" value="count">
+            </form>
+        </div>
+        
+    </body>
+</html>
+

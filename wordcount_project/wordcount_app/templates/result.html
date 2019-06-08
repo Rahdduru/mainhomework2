@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Wordcount</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+
+    <body style="text-align: center;">
+        <div class="alert alert-warning" role="alert">
+            ※당신이 입력한 텍스트는 {{ total }}로 구성되어 있습니다.※
+        </div>
+
+        <br>
+
+        <div style="margin: 10px 10%;" class="alert alert-dark" role="alert">
+            <a style="font-size: 20px;">[입력한 텍스트]</a>
+            <hr>
+            <a>{{ full }}</a>
+        </div>
+        <div class="alert alert-secondary" role="alert">
+            <p style="font-size: 20px;"><b>단어 카운트 : </b></p>
+            {% for word, howmany in dictionary %}
+            <p>{{ word }} : {{ howmany }}</p>
+            {% endfor %}
+              </div>
+    </body>
+</html>
+
